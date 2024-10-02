@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  
+  <servlet>   
+    <servlet-name>SaveDB</servlet-name>
+    <servlet-class>com.training.SaveDB</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveDB</servlet-name>
+    <url-pattern>/save</url-pattern>
+  </servlet-mapping>
+
+  <servlet>   
+    <servlet-name>BasicServlet</servlet-name>
+    <servlet-class>com.training.BasicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BasicServlet</servlet-name>
+    <url-pattern>/basicServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>   
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>com.training.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/homeServlet</url-pattern>
+  </servlet-mapping>
+  
+    <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+    <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:postgresql://localhost:5432/demo</param-value>
+  </context-param>
+  <context-param>
+    <param-name>uname</param-name>
+    <param-value>postgres</param-value>
+  </context-param>
+  <context-param>
+    <param-name>pass</param-name>
+    <param-value>257257</param-value>
+  </context-param>
+  
+</web-app>
